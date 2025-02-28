@@ -18,7 +18,7 @@ export const mainNavigationConfig: MainNavigationItem[] = [
     roles: [UserRoleEnum.USER],
   },
   {
-    title: 'ChatBot',
+    title: 'Chat Bot',
     to: '/chatbot',
     roles: [UserRoleEnum.USER],
   },
@@ -35,6 +35,11 @@ export const mainNavigationConfig: MainNavigationItem[] = [
   {
     title: 'Chatbot',
     to: '/chatbot-settings',
+    roles: [UserRoleEnum.ADMIN],
+  },
+  {
+    title: 'Plans',
+    to: '/plans',
     roles: [UserRoleEnum.ADMIN],
   },
 ];

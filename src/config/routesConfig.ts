@@ -27,7 +27,7 @@ export const routes: ConfigRoutes = {
       roles: [UserRoleEnum.USER],
     },
     subscription: {
-      path: 'Subscription',
+      path: 'subscription',
       roles: [UserRoleEnum.USER],
     },
     users: {
@@ -37,6 +37,18 @@ export const routes: ConfigRoutes = {
     'chatbot-settings': {
       path: 'chatbot-settings',
       roles: [UserRoleEnum.ADMIN],
+    },
+    checkout: {
+      path: 'checkout',
+      roles: [UserRoleEnum.USER],
+    },
+    plans: {
+      path: 'plans',
+      roles: [UserRoleEnum.ADMIN],
+    },
+    success: {
+      path: 'success',
+      roles: [UserRoleEnum.USER],
     },
   },
 };
