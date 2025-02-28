@@ -121,7 +121,7 @@ export const RegisterUserForm: React.FC = () => {
             mt="md"
             disabled={isPending}
           >
-            Create User
+            Submit
           </Button>
         </form>
       </Paper>

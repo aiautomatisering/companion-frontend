@@ -22,6 +22,9 @@ import { Forbidden } from './pages/Forbidden';
 import { Users } from './pages/Users';
 import { ToastContainer } from 'react-toastify';
 import { ChatBotSettings } from './pages/ChatBotSettings';
+import { Checkout } from './pages/Checkout';
+import { Plans } from './pages/Plans/Plans';
+import { Success } from './pages/Success';
 
 export const App = () => {
   const authData = useAuthHook();
@@ -49,8 +52,6 @@ export const App = () => {
       navigate('/403');
     },
   });
-
-  console.log('authData', authData);
 
   return (
     <AuthContext.Provider value={authData}>
@@ -125,6 +126,28 @@ export const App = () => {
                   />
                 }
               />
+
+              <Route
+                path={routes.userPage.plans.path}
+                element={
+                  <AuthorizationWrapper
+                    pageRoles={routes.userPage.plans.roles}
+                    page={<Plans />}
+                  />
+                }
+              />
+
+              <Route
+                path={routes.userPage.success.path}
+                element={
+                  <AuthorizationWrapper
+                    pageRoles={routes.userPage.success.roles}
+                    page={<Success />}
+                  />
+                }
+              />
+
+              <Route path="/checkout" element={<Checkout />} />
 
               <Route path="/403" element={<Forbidden />} />
 
